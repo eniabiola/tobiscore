@@ -1,0 +1,15 @@
+{
+    "name": "tobid/tobiscore",
+    "autoload": {
+        "psr-4": {
+            "app\\": "./"
+        }
+    },
+    "authors": [
+        {
+            "name": "tobidosumu",
+            "email": "dosunmumishael@gmail.com"
+        }
+    ],
+    "require": {}
+}
