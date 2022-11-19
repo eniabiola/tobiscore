@@ -1,4 +1,4 @@
-# Tobiscore PHP Framework
+# Tobiscore - PHP MVC Framework
 
 This is part of a series of assignments at Upperlink (where I intern). 
 
