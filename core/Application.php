@@ -17,5 +17,3 @@
             $this->router->resolve();
         }
     }
-
-?>
