@@ -23,5 +23,3 @@
             echo $this->router->resolve();
         }
     }
-
-?>
