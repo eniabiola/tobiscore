@@ -13,5 +13,10 @@
         {
             return 'Handling submitted data';
         }
+
+        public function phpInfo()
+        {
+            return phpinfo();
+        }
     }
 ?>
