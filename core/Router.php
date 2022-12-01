@@ -28,9 +28,6 @@
             $path = $this->request->getPath();
             $method = $this->request->getMethod();
             $callback = $this->routes[$method][$path] ?? false;
-            // var_dump($callback);
-
-            // exit;
 
             if ($callback === false)
             {
@@ -38,13 +35,12 @@
                 return $this->renderView("_404");
             }
 
-            // echo call_user_func($callback);
-            // exit;
+
             if (is_string($callback))
             {
                 return $this->renderView($callback);
             }
-            print_r($callback);
+//
             return call_user_func($callback);
         } 
          
