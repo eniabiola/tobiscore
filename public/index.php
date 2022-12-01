@@ -8,11 +8,17 @@
 
     $app = new Application(dirname(__DIR__));
 
+    $app->router->get('/hello', function (){
+        return "hello";
+    });
+
     $app->router->get('/', 'home');
 
-    $app->router->get('/contact', [SiteController::class, 'contact']);
+    $app->router->get('/contact', [new SiteController(), 'contact']);
 
     $app->router->post('/contact',[SiteController::class, 'handleContact']);
+
+    $app->router->get('/php_info', [new SiteController(), 'phpInfo']);
 
     $app->run();
     
