@@ -1,16 +1,27 @@
 <?php
 
-    // namespace app\controllers;
-    namespace app\core\Application;
+    namespace app\controllers;
+    use app\core\Controller;
+    use app\core\Request;
 
-    class SiteController 
+    class SiteController extends Controller
     {
-        public static function contact()
+        public function home()
         {
-            return 'Show contact form.'; 
+            $params = [
+                'name' => "Tobi"
+            ]; 
+
+            return $this->render('home', $params);
+        }        
+        
+        public function contact()
+        {
+
+            return $this->render('contact');
         }
 
-        public static function handleContact()
+        public function handleContact(Request $request)
         {
             return 'Handling submitted data';
         }
