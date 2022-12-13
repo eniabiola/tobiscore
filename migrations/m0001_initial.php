@@ -9,19 +9,21 @@
                 email VARCHAR(255) NOT NULL,
                 firstName VARCHAR(255) NOT NULL,
                 lastName VARCHAR(255) NOT NULL,
-                status TINYINT NOT NULL,
+                active TINYINT DEFAULT(0) NOT NULL,
                 created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-            ) ENGINE=INNODB;";
+            )";
+
+            // ENGINE=INNODB;
 
             $db->pdo->exec($SQL);
         }
 
-        public function down()
-        {
-            $db = \app\core\Application::$app->db;
-            $SQL = "DROP TABLE users";
-            $db->pdo->exec($SQL);
-        }
+        // public function down()
+        // {
+        //     $db = \app\core\Application::$app->db;
+        //     $SQL = "DROP TABLE users;";
+        //     $db->pdo->exec($SQL);
+        // }
     }
 
 ?>
